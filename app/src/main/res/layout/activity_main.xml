@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/backgroundColor"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+<!--  TextView Declarations  -->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintStart_toStartOf="@id/start_button"
+        app:layout_constraintEnd_toEndOf="@id/start_button"
+        app:layout_constraintBottom_toTopOf="@id/start_button">
+
+        <TextView
+            android:id="@+id/time_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:textSize="25sp"
+            android:textColor="@color/white"
+            android:text="@string/time_left" />
+
+        <TextView
+            android:id="@+id/laps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:text="@string/laps_done"
+            android:layout_margin="8dp" />
+
+    </LinearLayout>
+
+<!--  End of TextView Declarations  -->
+
+<!--  ButtonView Declarations  -->
+    <Button
+        android:id="@+id/start_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/start"
+        android:layout_margin="4dp"
+        android:backgroundTint="@color/secondaryMint"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <Button
+        android:id="@+id/reset_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reset"
+        android:layout_margin="4dp"
+        android:backgroundTint="@color/secondaryMint"
+        app:layout_constraintStart_toStartOf="@id/start_button"
+        app:layout_constraintEnd_toEndOf="@id/start_button"
+        app:layout_constraintTop_toBottomOf="@id/start_button"/>
+
+    <Button
+        android:id="@+id/pause_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pause"
+        android:layout_margin="4dp"
+        android:backgroundTint="@color/secondaryMint"
+        app:layout_constraintEnd_toEndOf="@id/reset_button"
+        app:layout_constraintStart_toStartOf="@id/reset_button"
+        app:layout_constraintTop_toBottomOf="@id/reset_button" />
+
+<!--  End of ButtonView Declarations  -->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
